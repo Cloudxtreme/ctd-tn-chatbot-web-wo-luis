@@ -19,9 +19,16 @@ body {
   line-height: 1.3;
   overflow: hidden;
 }
-a:hover, a:active, a:focus, button:hover, button:active, button:focus {
+
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus {
   outline: 0;
 }
+
 
 /*--------------------
 Chat
@@ -30,7 +37,7 @@ Chat
 .chat {
   position: absolute;
   bottom: 0;
-  right: 2%;
+  right: 16px;
   width: 420px;
   height: 60vh;
   max-height: 500px;
@@ -55,6 +62,7 @@ Chat
   flex-direction: column;
   transition: all .4s ease-in-out;
 }
+
 
 /*--------------------
 Chat Title
@@ -89,13 +97,13 @@ Chat Title
   letter-spacing: 1px;
 }
 
-.chat-title sup{
+.chat-title sup {
   color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.5);
   font-size: 7px;
   letter-spacing: 1px;
   text-transform: none;
-  }
+}
 
 .chat-title .avatar {
   position: absolute;
@@ -144,7 +152,6 @@ Messages
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  /*color: rgba(170, 6, 20, 1);*/
   color: rgba(255, 255, 255, 1);
   overflow: hidden;
   position: relative;
@@ -154,7 +161,7 @@ Messages
 .messages .messages-content {
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 10px;
   height: 100%;
   width: 95%;
 }
@@ -164,7 +171,6 @@ Messages
   float: left;
   padding: 6px 10px 7px;
   border-radius: 10px 10px 10px 0;
-  /*background: rgba(249, 185, 32, 1);*/
   background: rgb(80, 145, 202);
   margin: 8px 0 16px 0;
   font-size: 11px;
@@ -186,7 +192,6 @@ Messages
   content: '';
   position: absolute;
   bottom: -6px;
-  /*border-top: 6px solid rgba(249, 185, 32, 1);*/
   border-top: 6px solid rgb(80, 145, 202);
   left: 0;
   border-right: 7px solid transparent;
@@ -213,11 +218,8 @@ Messages
 
 .messages .message.message-personal {
   float: right;
-  right: 5px;
-  /*color: rgba(249, 185, 32, 1);*/
   color: rgba(255, 255, 255, 1);
   text-align: right;
-  /*background: rgba(170, 6, 20, 1);*/
   background: rgb(3, 89, 167);
   border-radius: 10px 10px 0 10px;
 }
@@ -339,7 +341,6 @@ Message Box
   height: 20px;
   margin: 0;
   padding-right: 20px;
-  /*width: 245px;*/
 }
 
 .message-box textarea:focus:-webkit-placeholder {
@@ -351,7 +352,7 @@ Message Box
   z-index: 1;
   top: 5px;
   right: 10px;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   border: none;
   background: rgb(36, 138, 82);
   font-size: 10px;
@@ -524,34 +525,60 @@ Bounce
   }
 }
 
+
 /*--------------------
 Bounce Animations
 --------------------*/
+
 /*
  * Animation configurations ( duration and fill mode )
  */
- .animated {
+
+.animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 @-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
-  40% {-webkit-transform: translateY(-30px);}
-  60% {-webkit-transform: translateY(-15px);}
-} 
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-30px);}
-  60% {transform: translateY(-15px);}
-} 
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
 }
 
-.animHelpText{
+.animHelpText {
   position: fixed;
   bottom: 50px;
   right: 30px;
@@ -564,8 +591,7 @@ Bounce Animations
   text-align: center;
   border-radius: 30px;
   padding: 10px;
-  background-color:rgb(3, 89, 167);
-  /*background-color:rgba(3, 89, 167, 1);*/
+  background-color: rgb(3, 89, 167);
 }
 
 .animHelpText::before {
@@ -575,78 +601,106 @@ Bounce Animations
   border-right: none;
   border-left: 5px solid transparent;
   border-top: 4px solid rgb(255, 255, 255);
-  /*border-top: 4px solid rgba(255, 255, 255, 1);*/
   bottom: -4px;
 }
 
-.button{
+.button {
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 3px;
   color: rgb(255, 255, 255);
-  /*color: rgba(255, 255, 255, 1);*/
   background-color: rgb(3, 89, 167);
-  /*background-color: rgba(3, 89, 167, 1);*/
 }
 
-/*rgb(2, 53, 100)*/
-/*rgb(3, 89, 167)*/
-
-md-autocomplete input:not(.md-input)
-{
+md-autocomplete input:not(.md-input) {
   height: 24px !important;
   color: white !important;
   font-size: 12px !important;
 }
 
-.md-autocomplete-suggestions-container.md-default-theme li:hover, .md-autocomplete-suggestions-container li:hover, .md-autocomplete-suggestions-container.md-default-theme li.selected, .md-autocomplete-suggestions-container li.selected
-{
+.md-autocomplete-suggestions-container.md-default-theme li:hover,
+.md-autocomplete-suggestions-container li:hover,
+.md-autocomplete-suggestions-container.md-default-theme li.selected,
+.md-autocomplete-suggestions-container li.selected {
   background: rgba(255, 255, 255, 0.2) !important;
 }
 
-.md-autocomplete-suggestions-container.md-default-theme li, .md-autocomplete-suggestions-container li
-{
-  color: rgb(238,238,238) !important;
+.md-autocomplete-suggestions-container.md-default-theme li,
+.md-autocomplete-suggestions-container li {
+  color: rgb(238, 238, 238) !important;
 }
 
-.md-autocomplete-suggestions
-{
-  background: rgba(0,0,0,0.9) !important;
+.md-autocomplete-suggestions {
+  background: rgba(0, 0, 0, 0.85) !important;
 }
 
-.md-autocomplete-suggestions li{
+.md-autocomplete-suggestions li {
   height: 30px !important;
-  padding: 0px 5px  !important;
+  padding: 0px 5px !important;
   font-size: 13px !important;
   line-height: 30px !important;
 }
 
-md-autocomplete button md-icon
-{
+md-autocomplete button md-icon {
   top: 20% !important;
   left: 590% !important;
   width: 20px !important;
 }
 
+#carForm {
+  background: rgb(0,0,0) !important;
+}
 
-button, html, input, select, textarea
-{
- font-family: 'Open Sans', sans-serif !important; 
+button,
+html,
+input,
+select,
+textarea {
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 md-autocomplete-wrap {
-  width : 100%;
+  width: 100%;
 }
 
-.md-virtual-repeat-container.md-autocomplete-suggestions-container
-{
-    left: 920px !important;
-    right: 28px !important;
-    bottom: 35px !important;
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+  left: auto !important;
+  right: 16px !important;
+  width: 420px !important;
+  bottom: 34px !important;
+}
+
+.md-autocomplete-suggestions-container.md-default-theme, .md-autocomplete-suggestions-container{
+  background: transparent !important;
 }
 
 
 
+blockquote {
+   font: 14px/22px normal helvetica, sans-serif;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 50px;
+   padding-left: 15px;
+   border-left: 3px solid #ccc;
+ }
+
+.download-btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3bb83b;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background: #34d934;
+  text-decoration: none;
+}
 
 

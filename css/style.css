@@ -143,6 +143,7 @@ Chat Title
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+
 /*--------------------
 Messages
 --------------------*/
@@ -530,6 +531,7 @@ Bounce
 Bounce Animations
 --------------------*/
 
+
 /*
  * Animation configurations ( duration and fill mode )
  */
@@ -649,7 +651,7 @@ md-autocomplete button md-icon {
 }
 
 #carForm {
-  background: rgb(0,0,0) !important;
+  background: rgb(0, 0, 0) !important;
 }
 
 button,
@@ -671,36 +673,76 @@ md-autocomplete-wrap {
   bottom: 34px !important;
 }
 
-.md-autocomplete-suggestions-container.md-default-theme, .md-autocomplete-suggestions-container{
+.md-autocomplete-suggestions-container.md-default-theme,
+.md-autocomplete-suggestions-container {
   background: transparent !important;
 }
 
+.bot-blockquote {
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
 
-
-blockquote {
-   font: 14px/22px normal helvetica, sans-serif;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   margin-left: 50px;
-   padding-left: 15px;
-   border-left: 3px solid #ccc;
- }
-
-.download-btn {
+.bot-download-btn {
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background: #3bb83b;
-  padding: 10px 20px 10px 20px;
+  background-color: #3bb83b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.download-btn:hover {
+.bot-download-btn:hover {
   background: #34d934;
   text-decoration: none;
 }
 
+textarea {
+    resize: none;
+}
 
+.message input[type="email"],.message input[type="text"]{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  border: 2px solid rgb(2, 53, 100);
+  background: rgb(3, 89, 167);
+  color: rgb(255, 255, 255);
+}
+
+.message input[type="submit"]{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  background-color: #3bb83b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.message input[type="submit"]:hover {
+  background: #34d934;
+  text-decoration: none;
+}
+
+.message textarea{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  border: 2px solid rgb(2, 53, 100);
+  background: rgb(3, 89, 167);
+  color: rgb(255, 255, 255);
+}

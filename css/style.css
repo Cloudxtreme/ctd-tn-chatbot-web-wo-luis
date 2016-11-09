@@ -679,7 +679,7 @@ md-autocomplete-wrap {
 }
 
 .bot-blockquote {
-  font: 14px/22px normal helvetica, sans-serif;
+  font: 12px/16px normal helvetica, sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 50px;
@@ -694,11 +694,12 @@ md-autocomplete-wrap {
   background-color: #3bb83b;
   border: none;
   color: white;
-  padding: 5px 10px;
+  padding: 2px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .bot-download-btn:hover {
@@ -745,4 +746,25 @@ textarea {
   border: 2px solid rgb(2, 53, 100);
   background: rgb(3, 89, 167);
   color: rgb(255, 255, 255);
+}
+
+
+::-webkit-input-placeholder {
+    color: #CCCCCC;
+    opacity: 0.5 !important; /* for chrome */
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #CCCCCC;
+    opacity: 0.5 !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #CCCCCC;
+    opacity: 0.5 !important;
+}
+
+:-ms-input-placeholder {  
+   color: #CCCCCC;
+   opacity: 0.5 !important;
 }
